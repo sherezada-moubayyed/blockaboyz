@@ -99,34 +99,35 @@ body{font-family: 'Rubik', sans-serif;}
 	position: fixed;
     left: 5%;
 	letter-spacing: 1px}*/
-#logo-web{position:absolute;}
+#logo-web{position:fixed;z-index: 100;width: 100%}
 
 #logo-web img {
-  position: fixed;
-  top: 5%;
-  left: 5%;
+  position: absolute;
+  top: 28px;
+  left: 60px;
   width: 100px;
   z-index:100;
 }
 
 #logo-web > img:nth-child(2),
-#logo-web > img:nth-child(3) {
+#logo-web > img:nth-child(3),
+#logo-web > img:nth-child(4)  {
   clip: rect(0, 0, 0, 0);
 }
 #logo-web > img:nth-child(2) {
-      left: 104px;
-    top: 42px;
+  left: 108px;
+  top: 38px;
   animation: example-three-anim-1 1.5s infinite linear alternate-reverse, destroy2 4s infinite linear;
 }
 #logo-web > img:nth-child(3) {
-      left: 109px;
-    top: 45px;
+  left: 111px;
+  top: 38px;
   animation: example-three-anim-2 2s infinite linear alternate-reverse,destroy2 9s infinite linear;
 }
 
 #logo-web > img:nth-child(4) {
-    left: 105px;
-    top: 49px;
+    left: 106px;
+    top: 44px;
     animation: destroy2 3s infinite linear, example-three-anim-2 2s infinite linear alternate-reverse; 
 }
 
@@ -703,10 +704,14 @@ body{font-family: 'Rubik', sans-serif;}
   #menu ul li:nth-child(4) a,#menu ul li:nth-child(5) a,#menu ul li:nth-child(6) a{ padding-left:40px;}
   #menu.open ul li:nth-child(1) a,#menu.open ul li:nth-child(2) a,#menu ul li:nth-child(3) a{padding-right: 0px}
   #menu.open ul li:nth-child(4) a,#menu.open ul li:nth-child(5) a,#menu ul li:nth-child(6) a{padding-left: 0px}
+  .album-big{ width: 500px; }
+  #button-presskit{font-size: 23px} 
 }
 
 @media (max-width: 767px){
   #menu ul li{padding-bottom:10px;}  
+  .album-big{max-width: 100%;height: auto }
+  #barraaceptacion{min-height: 78px !important}
  
 }
 
@@ -973,11 +978,12 @@ body{font-family: 'Rubik', sans-serif;}
 =============================================*/
 
 .album-big{
-    width: 500px;
     height: auto;
     display: block;
     margin:0 auto;
 }
+
+
 
 .album-small{
     width: 300px;
@@ -991,6 +997,7 @@ body{font-family: 'Rubik', sans-serif;}
 ================================================*/
 .youtube-videos{
   width: 100%;
+  border-color:black !important;
 }
 
 /* PRESS
@@ -1011,7 +1018,7 @@ body{font-family: 'Rubik', sans-serif;}
 
 #button-presskit{
   position: absolute;
-  bottom: 10%;
+  bottom: 32%;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -1060,9 +1067,25 @@ body{font-family: 'Rubik', sans-serif;}
   color:yellow;
 }
 
-.background-lookbook img{
-  height: 100vh;
-  margin:0 auto;
+.slick-slide{height: 100vh !important}
+
+@media (max-height: 899px){
+
+  .background-lookbook img{
+    height: 100vh;
+    margin:0 auto;
+  }
+}
+
+@media (min-height: 900px){
+  .background-lookbook img{
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .credits{
