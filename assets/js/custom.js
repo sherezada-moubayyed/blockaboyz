@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var menu = $("#menu");
 
-	var urlVideo = "https://www.youtube.com/embed/nY4QOgrCS7M?controls=1&showinfo=0&rel=0&autoplay=1&loop=1";
+	var urlVideo = "https://www.youtube.com/embed/VmZXR28j0Cg?controls=1&showinfo=0&rel=0&autoplay=1&loop=1";
 
 	var windows = $(window);
 	var height = windows.height();
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	var settingSlick = {
 	  centerMode: true,
 	  lazyLoad: 'ondemand',
-	  centerPadding: '20px',
+	  centerPadding: '30px',
 	  slidesToShow: 1,
 	  prevArrow: "<button type='button' class='slick-prev'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
 	  nextArrow: "<button type='button' class='slick-next'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>",
@@ -68,16 +68,14 @@ $(document).ready(function(){
 	    {
 	      breakpoint: 768,
 	      settings: {
-	        arrows: false,
 	        centerMode: true,
 	        centerPadding: '40px',
-	        slidesToShow: 3
+	        slidesToShow: 1
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-	        arrows: false,
 	        centerMode: true,
 	        centerPadding: '40px',
 	        slidesToShow: 1
